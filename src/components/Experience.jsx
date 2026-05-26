@@ -6,7 +6,7 @@ const experiences = [
     company: 'Magically Developer',
     period: 'Agosto 2024 — Presente · Freelance',
     bullets: [
-      'Identidad visual integral y logotipos para EMT Fitness y Storships, asegurando coherencia de marca.',
+      'Identidad visual integral y logotipos para EMT Fitness, Storships y Nivel Cero, asegurando coherencia de marca.',
       'Sitios web responsivos con React + Bootstrap, navegación impecable en mobile y desktop.',
       'Cada entrega equilibra estética y funcionalidad técnica sin compromisos.',
     ],
@@ -17,7 +17,7 @@ const experiences = [
     period: 'Septiembre 2024 — Presente',
     bullets: [
       'Crecimiento orgánico de 1.346 a 1.944 seguidores en Instagram para Nivel Cero.',
-      'Reel de productos animados con más de 120.000 reproducciones.',
+      'Reel de productos animados con más de 130.000 reproducciones.',
       'Estrategia de contenido para Storships: redes sociales + landing con calculadora de envíos en React.',
     ],
   },
