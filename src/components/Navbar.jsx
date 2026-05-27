@@ -1,4 +1,4 @@
-import logo from '../assets/LogoGc.png'
+import logo from '../assets/GcLogo.png'
 
 export default function Navbar() {
   const links = [
