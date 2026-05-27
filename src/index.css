@@ -69,6 +69,97 @@ body {
   color: var(--accent) !important;
 }
 
+/* ─── MENU HAMBURGUESA & MOBILE (AGREGADO) ─── */
+
+/* Botón contenedor de la hamburguesa */
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1010;
+}
+
+/* Línea central de la hamburguesa */
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  position: relative;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Líneas superior e inferior */
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  transition: all 0.2s ease-in-out;
+}
+.hamburger::before { top: -7px; }
+.hamburger::after { bottom: -7px; }
+
+/* Animación cuando el menú está ABIERTO */
+.hamburger.open {
+  background: transparent;
+}
+.hamburger.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.hamburger.open::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+/* Comportamiento del menú de links */
+@media (max-width: 767.98px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Escondido por defecto a la derecha */
+    width: 100%; /* Ocupa el 80% del ancho del celular */
+    height: 100vh;
+    background: rgba(13, 13, 13, 0.98); /* Un toque más opaco que la barra principal */
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+  }
+
+  /* Cuando el estado es true, entra el menú */
+  .nav-menu.open {
+    right: 0;
+  }
+
+  .gc-nav .nav-link {
+    font-size: 1rem; /* Un poco más grande en celular para que sea fácil de tocar con el dedo (UX) */
+    letter-spacing: 0.15em;
+  }
+}
+
+/* Ajustes para pantallas de escritorio (reemplaza el d-none d-md-flex) */
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    position: static;
+    height: auto;
+    width: auto;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
 /* ─── HERO ─── */
 .gc-hero {
   min-height: 100vh;
@@ -157,6 +248,35 @@ body {
   0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
   40%  { transform: scaleY(1); opacity: 1; }
   100% { transform: scaleY(1); transform-origin: bottom; opacity: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .gc-hero {
+    min-height: auto; 
+    /* Subimos el padding-top de 7rem a 9.5rem (o 10rem) para esquivar el Navbar */
+    margin-top: 10rem;
+    justify-content: flex-start; 
+  }
+
+  /* Ocultamos el indicador de scroll en mobile si te quedó flotando raro */
+  .gc-scroll-indicator {
+    display: none;
+  }
+
+  .gc-eyebrow {
+    font-size: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .gc-hero-title {
+    margin-bottom: 1.2rem;
+  }
+
+  .gc-hero-sub {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2.2rem;
+  }
 }
 
 /* ─── BUTTONS ─── */
