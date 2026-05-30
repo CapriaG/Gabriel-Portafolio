@@ -102,7 +102,7 @@ export default function Contact() {
               ¿Trabajamos<br /><em>juntos?</em>
             </h2>
             <p style={{ color: 'var(--muted)', fontWeight: 300, lineHeight: 1.85, marginBottom: '2.5rem' }}>
-              Estoy disponible para proyectos freelance y posiciones full-time remotas.
+              Estoy disponible para proyectos freelance y posiciones full-time.
               Completá el formulario o escribime directamente.
             </p>
 

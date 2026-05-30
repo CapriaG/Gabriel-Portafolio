@@ -40,7 +40,7 @@ export default function About() {
           </p>
           <p className="gc-about-text">
             Trabajo como freelance para proyectos de distintos rubros y busco sumar a un equipo
-            remoto donde el diseño y la ingeniería se fusionen.
+            donde el diseño y la ingeniería se fusionen.
           </p>
           <div className="d-flex gap-5 mt-4">
             {metrics.map((m) => (
